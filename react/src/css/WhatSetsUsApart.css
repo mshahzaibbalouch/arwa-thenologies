@@ -1,0 +1,7 @@
+.main-content.hovered {
+    background-color: #1fa5da;
+    transition: 2s;
+}
+.heading-div h3{
+    color: #1fa5da;
+}

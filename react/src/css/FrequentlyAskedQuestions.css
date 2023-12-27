@@ -1,0 +1,80 @@
+#faq .accordion-button:focus {
+    z-index: 3;
+    border-color: transparent;
+    outline: 0;
+    box-shadow: none;
+}
+
+
+
+
+#faq .accordion-button {
+    font-size: 20px;
+    font-family: 'Regular Sf Pro Display', Helvetica, Arial, Lucida, sans-serif;
+}
+
+#faq .accordion-button:not(.collapsed) {
+    color: #000;
+    background-color: transparent;
+    box-shadow: none;
+}
+
+#faq .accordion-button:not(.collapsed)::after {
+    content: "-";
+    font-size: 35px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #34a8d61a;
+    background-image: none;
+    transform: var(--bs-accordion-btn-icon-transform);
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+#faq .accordion-button::after {
+    content: "+";
+    font-size: 25px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: #92c63e26;
+    background-image: none;
+    transform: var(--bs-accordion-btn-icon-transform);
+    display: flex;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+#faq .accordion-button {
+    color: var(--bs-theme-bg-secondary);
+}
+
+
+#faq .accordion-button:not(.collapsed) {
+    color: var(--bs-theme-bg-primary);
+}
+
+#faq .accordion-item {
+    border: 0px !important;
+    border-bottom: 1px solid #123 !important;
+}
+
+#faq .last-child {
+    border: none !important;
+}
+
+
+#faq .section-title p{
+    font-size: 23px;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+}

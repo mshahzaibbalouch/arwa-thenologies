@@ -1,0 +1,21 @@
+:root {
+    --bs-theme-bg-green: #93c63e;
+}
+
+.bannar-bg {
+    background-image: url(../../public//assets/img/blog/banner-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.blog-content {
+    max-width: 60%;
+}
+
+.link-color {
+    color: var(--bs-theme-bg-green);
+}
+
+.link-color:hover {
+    color: var(--bs-theme-bg-green);
+}

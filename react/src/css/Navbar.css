@@ -1,0 +1,21 @@
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: var(--bs-theme-bg-light-secondary) !important;
+  cursor: pointer;
+  border-color: var(--bs-theme-bg-light-secondary) !important;
+}
+
+.custom-border {
+  border-bottom: 2px solid transparent;
+}
+
+.m-40 {
+  margin-top: -40px !important;
+}
+.border-li-hover {
+  border-bottom: 2px solid var(--bs-theme-bg-light-secondary);
+}
+
+.single-category-item:hover {
+  border-bottom: 2px solid var(--bs-theme-bg-light-secondary);
+}

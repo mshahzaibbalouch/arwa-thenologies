@@ -1,0 +1,14 @@
+.rescue-card .card-title {
+  font-size: 40px;
+  font-family: "Bold Sf Pro Display", Helvetica, Arial, Lucida, sans-serif;
+  font-weight: 500;
+}
+
+.rescue-card {
+  background-color: #34a8d61a;
+}
+
+.rescue-card .card{
+    background-color: var(--bs-theme-bg-transparent) !important;
+    box-shadow: none !important;
+}

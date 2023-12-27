@@ -1,0 +1,21 @@
+.timer-container {
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+  }
+  
+  .timer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .timer-item span {
+    margin: 5px;
+  }
+  

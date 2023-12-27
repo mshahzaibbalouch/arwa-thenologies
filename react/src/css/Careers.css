@@ -1,0 +1,33 @@
+.th-bg {
+    background-color: #93c63e !important;
+    width: 50%;
+}
+
+tr:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+}
+
+
+td:nth-child(2) {
+    position: relative;
+
+}
+
+.table tbody tr:hover td:nth-child(2) .arrow-icon {
+    opacity: 1;
+}
+
+.table tbody tr td:nth-child(2) .arrow-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    opacity: 0;
+    background-color: #93c63e;
+    color: white;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+    
+}

@@ -1,0 +1,10 @@
+.custom-card:hover{
+    background-color:  #29A8D7;
+    color: #ffffff;
+}
+.custom-card:hover img{
+    filter: invert(1) brightness(7);
+}
+.custom-card {
+    height: 90%;
+}

@@ -1,0 +1,70 @@
+:root {
+    --bs-theme-bg-blue: #34a8d6;
+    --bs-theme-bg-green: #93c63e;
+}
+
+.custom-cards ul {
+    padding: 0 !important;
+    list-style: none !important;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px !important;
+    padding-bottom: 25px !important;
+}
+
+.custom-cards ul li {
+    background-color: #93c63e38;
+    color: #93C63E !important;
+}
+
+.custom-cards span {
+    color: #93C63E;
+}
+
+.btnBlue {
+    background-color: var(--bs-theme-bg-blue);
+    color: #ffffff;
+    border-color: var(--bs-theme-bg-blue);
+    border-style: solid;
+}
+
+.btnBlue:hover {
+    color: var(--bs-theme-bg-blue);
+    background-color: transparent !important;
+    border-color: var(--bs-theme-bg-blue);
+    border-style: solid;
+}
+
+.btn {
+    box-shadow: none !important;
+}
+
+
+#developer-cruntly .btn-primary {
+    background-color: var(--bs-theme-bg-primary) !important;
+}
+
+#developer-cruntly .border-primary {
+    border-color: var(--bs-theme-bg-primary) !important;
+}
+
+
+#developer-cruntly .btn-primary:hover {
+    background-color: transparent !important;
+    color: var(--bs-theme-bg-primary) !important;
+}
+
+
+.btn-green {
+    background-color: var(--bs-theme-bg-green);
+    color: #ffffff;
+    border-color: var(--bs-theme-bg-green);
+    border-style: solid;
+}
+
+.btn-green:hover {
+    color: var(--bs-theme-bg-green);
+    background-color: transparent !important;
+    border-color: var(--bs-theme-bg-green);
+    border-style: solid;
+}

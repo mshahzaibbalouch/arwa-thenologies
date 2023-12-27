@@ -1,0 +1,27 @@
+/* Portfolio.css */
+.portfolio-link {
+    text-decoration: none;
+  }
+  
+  .portfolio-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .portfolio-content {
+    order: 1;
+  }
+  
+  .portfolio-image {
+    order: 2;
+  }
+  
+  .even-index .portfolio-content {
+    order: 2;
+  }
+  
+  .even-index .portfolio-image {
+    order: 1;
+  }
+  
