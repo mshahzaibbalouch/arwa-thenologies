@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="row">
             <div className="col-lg-3 col-md-2 footer-contact">
               <img
-                src="assets/img/footer-logo.svg"
+                src="assets/img/arwa-logo-footer.png"
                 alt=""
                 className="w-25  text-center ms-5 d-flex align-items-center justify-content-center"
               />
@@ -18,31 +18,31 @@ const Footer = () => {
                 Arwa Technologies, Mahram Wala
                 <br /> Lodhran, Lodhran, Punjab
                 <br />
-                <strong>Phone:</strong> +92 344 4645568
+                <strong>Phone:</strong> +92 300 6771046
                 <br />
-                <strong>Email:</strong> sports@arwatechnologies.com <br />
+                <strong>Email:</strong> supports@arwatechnologies.com <br />
               </p>
             </div>
 
             <div className="col-lg-3 col-md-2 footer-links">
               <h4>Useful Links</h4>
               <ul className="list-group list-group-flush">
-                <li className="list-group-item p-0 pb-2 border-0">
+                <li className="list-group-item p-0 pb-2 border-0 bg-transparent">
                   <i className="bx bx-chevron-right"></i> <a href=".">Home</a>
                 </li>
-                <li className="list-group-item p-0 pb-2 border-0">
+                <li className="list-group-item p-0 pb-2 border-0 bg-transparent">
                   <i className="bx bx-chevron-right"></i>
                   <a href=".">About us</a>
                 </li>
-                <li className="list-group-item p-0 pb-2 border-0">
+                <li className="list-group-item p-0 pb-2 border-0 bg-transparent">
                   <i className="bx bx-chevron-right"></i>
                   <a href=".">Services</a>
                 </li>
-                <li className="list-group-item pb-2 p-0 border-0">
+                <li className="list-group-item pb-2 p-0 border-0 bg-transparent">
                   <i className="bx bx-chevron-right"></i>
                   <a href=".">Terms of service</a>
                 </li>
-                <li className="list-group-item p-0 pb-2 border-0">
+                <li className="list-group-item p-0 pb-2 border-0 bg-transparent">
                   <i className="bx bx-chevron-right"></i>
                   <a href=".">Privacy policy</a>
                 </li>
@@ -52,23 +52,23 @@ const Footer = () => {
             <div className="col-lg-3 col-md-2 footer-links">
               <h4>Our Services</h4>
               <ul className="list-group list-group-flush">
-                <li className="list-group-item p-0 pb-2 border-0">
+                <li className="list-group-item p-0 pb-2 border-0 bg-transparent">
                   <i className="bx bx-chevron-right"></i>{" "}
                   <a href=".">AI & CHAT GPT</a>
                 </li>
-                <li className="list-group-item p-0 pb-2 border-0">
+                <li className="list-group-item p-0 pb-2 border-0 bg-transparent">
                   <i className="bx bx-chevron-right"></i>{" "}
                   <a href=".">Web Design</a>
                 </li>
-                <li className="list-group-item p-0 pb-2 border-0">
+                <li className="list-group-item p-0 pb-2 border-0 bg-transparent">
                   <i className="bx bx-chevron-right"></i>{" "}
                   <a href=".">Web Development</a>
                 </li>
-                <li className="list-group-item p-0 pb-2 border-0">
+                <li className="list-group-item p-0 pb-2 border-0 bg-transparent">
                   <i className="bx bx-chevron-right"></i>{" "}
                   <a href=".">Product Management</a>
                 </li>
-                <li className="list-group-item p-0 pb-2 border-0">
+                <li className="list-group-item p-0 pb-2 border-0 bg-transparent">
                   <i className="bx bx-chevron-right"></i>{" "}
                   <a href=".">Marketing</a>
                 </li>
@@ -104,19 +104,19 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-bottom py-1">
-          <div className="copyright text-center w-100 text-white m-0">
-            &copy; Copyright{" "}
-            <strong>
-              <span>
-                <Link to="/" className="text-black">
-                  {" "}
-                  Arwa Technologies{" "}
-                </Link>
-              </span>
-            </strong>
-            All Rights Reserved
+            <div className="copyright text-center w-100 text-white m-0">
+              &copy; Copyright{" "}
+              <strong>
+                <span>
+                  <Link to="/" className="text-white">
+                    {" "}
+                    Arwa Technologies{" "}
+                  </Link>
+                </span>
+              </strong>
+              All Rights Reserved
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </footer>

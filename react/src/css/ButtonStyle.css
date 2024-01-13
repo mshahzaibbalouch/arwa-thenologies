@@ -1,12 +1,10 @@
 .hover-change-bg:hover {
-  background-color: transparent !important;
-  color: var(--bs-theme-bg-secondary) !important;
+  background-color: var(--bs-theme-bg-secondary) !important;
+  color: var(--bs-theme-bg-white) !important;
 }
 
-.btn-primary {
-  background-color: var(--bs-theme-bg-secondary) !important;
-  box-shadow: none !important;
-}
-.border-primary {
+.btn-outline-primary {
   border-color: var(--bs-theme-bg-secondary) !important;
+  color: var(--bs-theme-bg-secondary) !important;
+  background-color: var(--bs-theme-bg-transparent) !important;
 }

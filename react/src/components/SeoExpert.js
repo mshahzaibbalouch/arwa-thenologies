@@ -21,12 +21,18 @@ function SeoExpert({ category }) {
     };
     fetchData();
   }, [category]);
-  
+
   return (
     <div className="container">
       <div className="text-center">
         {hireStepData.map((item, index) => (
           <div className="row">
+            <div className="mt-5">
+              <div className="col-md-12">
+                <h3>{item.title}</h3>
+                <p className='my-3'>{item.description}</p>
+              </div>
+            </div>
             <div className="col-md-4" key={index}>
               <div className={`icon-${index + 1} my-3 div`}>
                 <img

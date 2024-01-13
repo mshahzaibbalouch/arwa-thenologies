@@ -20,36 +20,40 @@ const Testimonial = () => {
   }, []);
   return (
     <div id="testimonial">
-      <Container>
-        <div className="testimoial-carousel my-3 px-5 rounded-4">
-          <Carousel>
-            {testimonial.map((item, index) => {
-              return (
-                <Carousel.Item key={index}>
-                  <Card>
-                    <Card.Body className="d-flex order-1 align-items-center justify-content-between">
-                      <Card.Text>
+      {testimonial.length !== 0 ? (
+        <Container>
+          <div className="testimoial-carousel my-3 px-5 rounded-4">
+            <Carousel>
+              {testimonial.map((item, index) => {
+                return (
+                  <Carousel.Item key={index}>
+                    <Card>
+                      <Card.Body className="d-flex order-1 align-items-center justify-content-between">
+                        <Card.Text>
+                          <img
+                            alt=""
+                            src="assets/img/testimonial/quote.png"
+                            className="quote-img d-block"
+                          />
+                          {item.description}
+                          <Card.Title>{item.title}</Card.Title>
+                        </Card.Text>
                         <img
-                          alt=""
-                          src="assets/img/testimonial/quote.png"
-                          className="quote-img d-block"
+                          alt={item.title}
+                          src={item.image}
+                          className="rounded-circle order-md-1"
                         />
-                        {item.description}
-                        <Card.Title>{item.title}</Card.Title>
-                      </Card.Text>
-                      <img
-                        alt={item.title}
-                        src={item.image}
-                        className="rounded-circle order-md-1"
-                      />
-                    </Card.Body>
-                  </Card>
-                </Carousel.Item>
-              );
-            })}
-          </Carousel>
-        </div>
-      </Container>
+                      </Card.Body>
+                    </Card>
+                  </Carousel.Item>
+                );
+              })}
+            </Carousel>
+          </div>
+        </Container>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

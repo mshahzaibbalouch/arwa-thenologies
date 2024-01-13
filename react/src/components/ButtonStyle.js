@@ -1,11 +1,10 @@
 import React from 'react';
 import '../css/ButtonStyle.css';
-// import { NavLink } from 'react-router-dom'
 import { Button } from 'react-bootstrap';
 
-const ButtonStyle = ({title, onChlickFunction}) => {
+const ButtonStyle = ({title, onClickFunction}) => {
   return (
-    <Button to='/' onClick={onChlickFunction} className='btn btn-primary border border-2 border-primary hover-change-bg bg-dark rounded-4 w-100 text-white px-5 py-3'>
+    <Button to='/' onClick={onClickFunction} className='btn w-100 btn-outline-primary shadow-none border border-2 border-primary hover-change-bg rounded'>
         {title}
     </Button>
   )

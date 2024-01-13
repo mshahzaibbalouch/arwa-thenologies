@@ -8,8 +8,9 @@ import { useParams } from "react-router-dom";
 import SeoExpert from "../components/SeoExpert";
 import DevelopersCurrentlyAvailableText from "../components/DevelopersCurrentlyAvailableText.js";
 import DevelopersCurrentlyAvailable from "../components/DevelopersCurrentlyAvailable.js";
-import HireSkilledRailsProgrammer from "../components/HireSkilledRailsProgrammer.js";
-import HireSkilledRailsProgrammerCard from "../components/HireSkilledRailsProgrammerCard.js";
+import HireSkilledProgrammer from "../components/HireSkilledProgrammer.js";
+import DeveloperExperties from "../components/DeveloperExperties.js";
+
 
 const HireTalent = () => {
   const [pageData, setPageData] = useState([]);
@@ -45,32 +46,15 @@ const HireTalent = () => {
 
   return (
     <div>
-      <HeroSection />
-      <DevelopersCurrentlyAvailableText
-        title="Process to Assemble SEO Expert Team"
-        description="Our 3-step process takes the team from inception to finished product. Devsinc ensures hiring a dedicated SEO expert team within 24 hours."
-      />
+      <HeroSection category={cetagory}  />
       <SeoExpert category={cetagory} />
-      <DevelopersCurrentlyAvailableText
-        title="Rails Developers Currently Available"
-        description="Majority of companies decide to hire a Ruby on Rails development company and plan to work with Rails developers. Below are the ones that are available to work efficiently."
-      />
+      <DevelopersCurrentlyAvailableText  category={cetagory}/>
       <DevelopersCurrentlyAvailable cetagory={cetagory} />
-      <HireSkilledRailsProgrammer />
-      <DevelopersCurrentlyAvailableText
-        title="Ruby on Rails Developer’s Expertise"
-        description="We ensure to deliver competitive Rails development expertise to maintain a long term relationship with your business."
-      />
-      <HireSkilledRailsProgrammerCard />
-      <WhyArwaTechnologies />
-      <FrequentlyAskedQuestions />
-      <Rescue
-        data={{
-          title: "Rescue your company’s growth!",
-          discription:
-            "Let us know about your business plans on an introductory call, and we’ll lead the matching process.",
-        }}
-      />
+      <HireSkilledProgrammer category={cetagory} />
+      <DeveloperExperties category={cetagory}/>
+      <WhyArwaTechnologies category={cetagory}/>
+      <FrequentlyAskedQuestions category={cetagory}/>
+      <Rescue/>
     </div>
   );
 };

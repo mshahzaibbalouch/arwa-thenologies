@@ -6,7 +6,7 @@ import Rescue from "../components/Rescue";
 const Team = () => {
   return (
     <div>
-      <HeroSection />
+      <HeroSection category={"home"} />
       <CoreTeam />
       <Rescue />
     </div>

@@ -3,7 +3,7 @@
     color: #ffffff;
 }
 .custom-card:hover img{
-    filter: invert(1) brightness(7);
+    filter: invert(1) brightness(5);
 }
 .custom-card {
     height: 90%;

@@ -1,38 +1,53 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import {useNavigate } from "react-router-dom";
 import "../css/WhyArwaTechnologies.css";
 import ButtonStyle from "./ButtonStyle";
+import axios from "axios";
 
-const WhyArwaTechnologies = () => {
+const WhyArwaTechnologies = ({ category }) => {
+  const [data, setData] = useState(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:5000/api/whyArwaTechnologies");
+
+        const filteredData = response.data.filter(
+          (item) => item.category === category
+        );
+        setData(filteredData);
+        console.log(filteredData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, [category]);
+
   return (
     <div id="why-arwa" className="my-4">
       <Container>
-        <Row>
-          <Col md={6}>
-            <img
-              src="/assets/img/Why-arwa-1-scaled.jpg"
-              alt="Why Arwa Technologies"
-              className="w-100"
-            />
-          </Col>
-          <Col md={6}>
-            <h2 className="fs-1 fw-bold text-black">Why Arwa Technologies</h2>
-            <p className="why-arwa-technologies-para">
-              At Arwa Technologies, we help you hire top JavaScript developers,
-              consultants and coders. We comprise 1300+ developers ready to
-              interview and available for hire on a part-time and full-time
-              basis. Our JavaScript developer fully understands JSON, jQuery And
-              Handlebars. Our strategy is passionate about the language and
-              willing to pursue their career. Our dedicated team is projected to
-              scale your company to the next level. We prioritise translating
-              higher-quality results through top Tech Talent and faster
-              development.
-            </p>
-            <div className="w-50">
-              <ButtonStyle />
-            </div>
-          </Col>
-        </Row>
+        {
+          data &&
+          data.map((entry, index) => (
+            <Row>
+              <Col md={6} key={index}>
+                <img src={entry.imagePath} alt={entry.title} className="w-100" />
+              </Col>
+              <Col md={6} key={entry._id}>
+                <div>
+                  <h2 className="fs-1 fw-bold text-black">{entry.title}</h2>
+                  <p>{entry.content}</p>
+                </div>
+                <div className="w-50">
+                  <ButtonStyle title={"Hire a Developer"} onClickFunction={() => navigate("/contact")}/>
+                </div>
+              </Col>
+            </Row>
+          ))}
       </Container>
     </div>
   );

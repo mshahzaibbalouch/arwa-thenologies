@@ -7,7 +7,7 @@ const WhatWeDo = () => {
     
   return (
     <div>
-      <HeroSection />
+      <HeroSection category={"home"} />
       <WhatSetsUsApart />
       <Rescue />
     </div>

@@ -233,14 +233,14 @@ function RecentBlogs() {
 
                         (searchInput) ? <div className='row'>
                             <div className='col-lg-3 mt-5 '>
-                                <ButtonStyle title={"Back to Blogs"} onChlickFunction={handleBackToBlogs} />
+                                <ButtonStyle title={"Back to Blogs"} onClickFunction={handleBackToBlogs} />
                             </div>
                         </div> : ""
                     }
                     {filteredFeaturedBlogs.length > visibleBlogs && (
                         <div className='col-lg-3 mt-5 mx-auto'>
 
-                            <ButtonStyle title={"Load More"} onChlickFunction={loadMoreBlogs} />
+                            <ButtonStyle title={"Load More"} onClickFunction={loadMoreBlogs} />
 
                         </div>
                     )}

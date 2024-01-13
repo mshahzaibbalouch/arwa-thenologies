@@ -42,6 +42,27 @@ router.post("/team/skill", async (req, res) => {
   }
 });
 
+// Get a team member by ID
+router.get("/team/:id", async (req, res) => {
+  try {
+    const teamMember = await Team.findById(req.params.id);
+
+    if (!teamMember) {
+      return res.status(404).json({ error: "Team member not found" });
+    }
+
+    res.status(200).json({ teamMember });
+  } catch (error) {
+    if (error.name === 'CastError') {
+      // Handle invalid ObjectId format
+      return res.status(400).json({ error: "Invalid team member ID" });
+    }
+    // Handle other types of errors
+    res.status(500).json({ error: error.message });
+  }
+});
+
+
 // Update a team member by ID
 router.put("/team/:id", async (req, res) => {
   try {

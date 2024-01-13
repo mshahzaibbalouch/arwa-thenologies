@@ -1,26 +1,25 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import '../css/HireSkilledRailsProgrammerCard.css';
 
-const cardData = [
-  {
-    title: 'Database Efficiency',
-    image: 'assets/img/HireSkilledRailsProgrammerCard/Dedicated_1.svg',
-    description: 'Every Rails developer at Devsinc is familiar with the top databases and experienced in writing through an active record to manage queries.',
-  },
-  {
-    title: 'Trained for Future',
-    image: 'assets/img/HireSkilledRailsProgrammerCard/Dedicated_1.svg',
-    description: 'We are experts in delivering projects based on Ruby on Rails concepts and principles and fully completing the gaps.',
-  },
-  {
-    title: 'Domain Expertise',
-    image: 'assets/img/HireSkilledRailsProgrammerCard/Dedicated_1.svg',
-    description: 'Our Rails development team has an in-depth knowledge of any domain to ensure smooth project delivery.',
-  },
- 
-];
+function HireSkilledRailsProgrammerCard({category}) {
+  const [cardData, setCardData] = useState([]);
 
-function HireSkilledRailsProgrammerCard() {
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/developersexpertise'); 
+        const filteredData = response.data.filter(
+          (item) => item.category === category
+        );
+        setCardData(filteredData);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+    fetchData();
+  }, []); 
+
   return (
     <div className='container'>
       <div className='row mt-5'>

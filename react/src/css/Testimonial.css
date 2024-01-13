@@ -42,7 +42,7 @@
 }
 
 #testimonial .carousel-indicators [data-bs-target] {
-    background-color: var(--bs-theme-bg-dark) !important;
+    background-color: var(--bs-theme-bg-primary) !important;
     height: 12px;
     width: 12px;
     border-radius: 50%;

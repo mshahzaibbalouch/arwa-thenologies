@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import "../css/DevelopersCurrentlyAvailable.css";
 import ButtonStyle from "./ButtonStyle";
 import axios from "axios";
+import {useNavigate } from "react-router-dom";
 
 function DevelopersCurrentlyAvailable({ cetagory }) {
   const [teamData, setTeamData] = useState([]);
   const [filteredTeamData, setFilteredTeamData] = useState([]);
+  const navigate = useNavigate();
   console.log(cetagory);
   useEffect(() => {
     const fetchTeamData = async () => {
@@ -23,7 +25,9 @@ function DevelopersCurrentlyAvailable({ cetagory }) {
   useEffect(() => {
     if (teamData.length > 0) {
       const filteredData = teamData.filter((developer) =>
-        developer.skills.some((skill) => skill.toLowerCase().includes(cetagory.toLowerCase()))
+        developer.skills.some((skill) =>
+          skill.toLowerCase().includes(cetagory.toLowerCase())
+        )
       );
       setFilteredTeamData(filteredData);
       console.log(filteredData);
@@ -55,12 +59,12 @@ function DevelopersCurrentlyAvailable({ cetagory }) {
                 <p className="text-center m-0">{developer.description}</p>
                 <ul className="p-0 m-0">
                   {developer.skills.map((skill, index) => (
-                    <li className="p-1 m-1 rounded" key={index}>
+                    <li className="p-1 m-1 rounded text-center4" key={index}>
                       {skill}
                     </li>
                   ))}
                 </ul>
-                <ButtonStyle title={"Hire Now"} onClickFunction="#" />
+                <ButtonStyle title={"Hire Now"} onClickFunction={() => navigate("/contact")}/>
               </div>
             </div>
           </div>

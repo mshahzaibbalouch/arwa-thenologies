@@ -40,18 +40,15 @@
 }
 
 
-#developer-cruntly .btn-primary {
-    background-color: var(--bs-theme-bg-primary) !important;
-}
 
 #developer-cruntly .border-primary {
-    border-color: var(--bs-theme-bg-primary) !important;
+    border-color: var(--bs-theme-bg-secondary) !important;
 }
 
 
 #developer-cruntly .btn-primary:hover {
     background-color: transparent !important;
-    color: var(--bs-theme-bg-primary) !important;
+    color: var(--bs-theme-bg-secondary) !important;
 }
 
 
@@ -67,4 +64,14 @@
     background-color: transparent !important;
     border-color: var(--bs-theme-bg-green);
     border-style: solid;
+}
+
+#developer-cruntly .border-primary {
+    border-color: var(--bs-theme-bg-blue) !important;
+    color: var(--bs-theme-bg-blue) !important;
+}
+#developer-cruntly .border-primary:hover {
+    border-color: var(--bs-theme-bg-blue) !important;
+    color: var(--bs-theme-bg-white) !important;
+    background-color: var(--bs-theme-bg-blue) !important;
 }
